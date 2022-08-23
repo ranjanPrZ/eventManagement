@@ -38,6 +38,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\UserLogoutController;
 use App\Http\Controllers\UserSignupController;
+use App\Http\Controllers\EventRegisterController;
 
 Route::group(
     [
@@ -372,6 +373,14 @@ Route::group(
             Route::get('{event_id}/attendees/',
                 [EventAttendeesController::class, 'showAttendees']
             )->name('showEventAttendees');
+
+            Route::get('{event_id}/register',
+                [EventRegisterController::class, 'showCheckIn']
+            )->name('showCheckIn');
+
+            Route::post('/registered',
+                [EventRegisterController::class, 'postRegisterUser']
+            )->name('postRegisterUser');
 
             Route::get('{event_id}/attendees/message',
                 [EventAttendeesController::class, 'showMessageAttendees']

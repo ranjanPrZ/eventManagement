@@ -677,11 +677,12 @@ class EventAttendeesController extends MyBaseController
         $attendee = Attendee::scope()->findOrFail($attendee_id);
 
         $this->dispatch(new SendOrderAttendeeTicketJob($attendee));
-
-        return response()->json([
+        $resp = response()->json([
             'status'  => 'success',
             'message' => trans("Controllers.ticket_successfully_resent"),
         ]);
+
+        return $resp;
     }
 
 

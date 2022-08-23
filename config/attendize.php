@@ -50,6 +50,7 @@ return [
         'partially_refunded' => 3,
         'cancelled'          => 4,
         'awaiting_payment'   => 5,
+        'registered'         => 6
     ],
 
     /* Attendee question types */

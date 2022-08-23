@@ -5,4 +5,5 @@ return [
     'manage_order'                   => 'You can manage this order at',
     'successful_order'               => 'Your order for the event <strong>:name</strong> was successful.',
     'tickets_attached'               => 'Your tickets are attached to this email. You can also view you order details and download your tickets at:',
+    'register_here'                  => 'Register here',
 ];

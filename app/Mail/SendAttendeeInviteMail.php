@@ -40,6 +40,6 @@ class SendAttendeeInviteMail extends Mailable
 
         return $this->subject($subject)
                     ->attach($file_path)
-                    ->view('Emails.AttendeeInvite');
+                    ->view('Emails.OrderAttendeeTicket');
     }
 }
